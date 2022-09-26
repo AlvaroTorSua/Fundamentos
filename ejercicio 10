@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	int terminos,facto;
+    facto=1;
+    float r,x;
+    r=x;
+    cout<<"ingrese los terminos que sea numero impar: ";
+    cin>> terminos;
+    cout<<" ingrese valor de x: ";
+    cin>>x;
+    
+
+    for (int i=1;i<=terminos; i++) {
+		facto=facto * ((i*2)-1)*((i*2)-1);
+		if (i % 2 == 0)
+		    r=r - pow(x,i-1)/facto;
+		else 
+		    r=r + pow(x,i-1)/facto;
+			}
+	cout<<"el numero factorial es  "<<r<<endl;
+	getch();
+	return 0;
+}
